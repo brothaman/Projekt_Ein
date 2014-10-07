@@ -21,13 +21,37 @@ def unit( vec):
 	mag = magnitude(vec)
 	return [val/mag for val in vec]
 
-def moment( weight, radius_to_cg):
+def moment_from_weight( weight, radius_to_cg):
 	'''
 	this function accepts 2 vectors of weight and radius of cg to determine 
 	moment about the cg
 	[ Wx, Wy, Wz] x [ rx, ry, rz]
 	'''
 	return cross_product( weight, radius_to_cg)
+
+def rotation( theta, axis_of_rotation='z'):
+	if axis_of_rotation == 'x':
+		return np.matrix(
+				(1, 0, 0),
+				(0, np.cos(theta), -np.sin(theta)),
+				(0, np.sin(theta),  np.cos(theta))
+				)
+	elif(axis_of_rotation == 'y'):
+		return np.matrix(
+				(np.cos(theta), 0, -np.sin(theta)),
+				(0            , 1, 0             ),
+				(np.sin(theta), 0,  np.cos(theta))
+				)
+	elif(axis_of_rotation == 'z'):
+		return np.matrix(
+				(np.cos(theta), -np.sin(theta), 0),
+				(np.sin(theta),  np.cos(theta), 0),
+				(0						, 0						 , 1)
+				)
+
+
+def angular_momentum():
+	bla = 'bla'
 
 def Angular_Momentum_l2_about_hip():
 	'''
