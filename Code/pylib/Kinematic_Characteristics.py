@@ -9,7 +9,7 @@ def cross_product( vec1, vec2):
 					 ]
 
 def dot_product( vec1, vec2):
-	return [ vec1[i]*vec2[i] for i in range(len(vec1)) ]
+	return sum([ vec1[i]*vec2[i] for i in range(len(vec1)) ])
 
 def magnitude(vec):
 	val = 0
@@ -18,8 +18,10 @@ def magnitude(vec):
 	return val**(1.0/2.0)
 
 def unit( vec):
-	mag = magnitude(vec)
-	return [val/mag for val in vec]
+	'''
+	returns unit vector (direction) of the input vector
+	'''
+	return np.divide(vec, float(np.linalg.norm(vec)))
 
 def moment_from_weight( weight, radius_to_cg):
 	'''
@@ -27,7 +29,7 @@ def moment_from_weight( weight, radius_to_cg):
 	moment about the cg
 	[ Wx, Wy, Wz] x [ rx, ry, rz]
 	'''
-	return cross_product( weight, radius_to_cg)
+	return np.cross( weight, radius_to_cg)
 
 def rotation( theta, axis_of_rotation='z'):
 	if axis_of_rotation == 'x':
@@ -39,19 +41,32 @@ def rotation( theta, axis_of_rotation='z'):
 	elif(axis_of_rotation == 'y'):
 		return np.matrix(
 				(np.cos(theta), 0, -np.sin(theta)),
-				(0            , 1, 0             ),
+				(0, 1, 0),
 				(np.sin(theta), 0,  np.cos(theta))
 				)
 	elif(axis_of_rotation == 'z'):
 		return np.matrix(
 				(np.cos(theta), -np.sin(theta), 0),
 				(np.sin(theta),  np.cos(theta), 0),
-				(0						, 0						 , 1)
+				(0, 0, 1)
 				)
+	else:
+		return 0
+
+def acceleration_necessary( resistance_vec, pvec1, pvec2, time):
+	'''
+	this function uses equations of motion to determine the necessary acceleration
+	to get the leg to a certain point at a specific time
+	currently this function will be just ideal acceleration with no resistances
+	'''
+	return np.subtract(
+			np.divide(np.subtract(pvec2, pvec1), np.divide(time**2, 2)),
+			resistance_vec)
+
+def output_torque( inertial_moment, radial_acceleration):
+	return np.multipy( inertial_moment, radial_acceleration)
 
 
-def angular_momentum():
-	bla = 'bla'
 
 def Angular_Momentum_l2_about_hip():
 	'''

@@ -1,0 +1,11 @@
+Title of the Project
+# begin comment line with a hashtag
+# inertia can either be designated by a scalar value 
+Inertia .05
+# or you can define inertia by a shape and density(kg/m3) giving in 
+# coordinates(m) and
+	rho 2700
+	x 0.0, .05
+	y 0.0, .05
+	z 0.0, .5
+Speed 
