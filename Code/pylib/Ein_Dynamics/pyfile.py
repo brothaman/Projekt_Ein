@@ -56,18 +56,19 @@ def update_radial():
     positition = np.array([])
     velocity = np.array([])
     motor_torque = np.array([])
-    for i in range(len(time)):
-        current_time = time[i]
-        previous_time = time[i-1]
-        if i == 0:
-            previous_time = current_time
-        r_i  = r(r_tt, r_t, r_i, current_time, previous_time)
-        r_t  = rt(r_tt, current_time, previous_time)
-        r_tt = rtt(torque, length_of_driver, mass, mech_adv, theta_t, r, theta_i)
-		position = np.concatenate((position, np.array([r_i])))
-		velocity = np.concatenate((velocity, np.array([r_t])))
-		motor_torque = np.concatenate((motor_torque, np.array([torque])))
-	return bla
+        for i in range(len(time)):
+            current_time = time[i]
+            previous_time = time[i-1]
+            if i == 0:
+                previous_time = current_time
+            r_i  = r(r_tt, r_t, r_i, current_time, previous_time)
+            r_t  = rt(r_tt, current_time, previous_time)
+            r_tt = rtt(torque, length_of_driver, mass, mech_adv, theta_t, r, theta_i)
+            position = np.concatenate((position, np.array([r_i])))
+            velocity = np.concatenate((velocity, np.array([r_t])))
+            motor_torque = np.concatenate((motor_torque, np.array([torque])))
+
+	return position, velocity, motor_torque
 def get_requirement():
 	return requrements
 
