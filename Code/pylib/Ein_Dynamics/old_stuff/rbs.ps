@@ -1,0 +1,2073 @@
+%!PS-Adobe-3.0
+%%Title: ../robotics_functions.py
+%%For: robertbrothers
+%%Creator: VIM - Vi IMproved 7.3 (2010 Aug 15)
+%%CreationDate: Sun Nov  9 19:24:08 2014
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 59 49 564 800
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate color
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: A4
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /usr/share/vim/vim73/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /usr/share/vim/vim73/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+595 842 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(../robotics_functions.py                                                      Page 1)59.5 792.4 ms
+F0 sf
+0.753 0 0.753 r
+(import)59.5 772.4 ms
+0 g
+( numpy )s
+0 0.502 0 r
+(as)s
+0 g
+( np, sympy )s
+0 0.502 0 r
+(as)s
+0 g
+( sy)s
+(gravity = sy.symbols\()59.5 752.4 ms
+0 0 0.753 r
+("g")s
+0 g
+(\))s
+0 0.502 0 r
+(def)59.5 732.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(symsum)s
+0 g
+(\( listin\):)s
+(  val = sy.zeros\(listin[)59.5 722.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(].shape\))s
+(  )59.5 712.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( listin:)s
+(    val = val+i)59.5 702.4 ms
+(  )59.5 692.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( val)s
+0.753 0 0 r
+(#define numerical rotation matricies)59.5 662.4 ms
+0 0.502 0 r
+(def)59.5 652.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(rotation_z)s
+0 g
+(\(theta\):)s
+(  )59.5 642.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( np.matrix\([)s
+(    [ np.cos\(theta\), -np.sin\(theta\), )59.5 632.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [ np.sin\(theta\),  np.cos\(theta\), )59.5 622.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 612.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, )s
+0 0 0.753 r
+(0)s
+0 g
+(, )s
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(    ]\))59.5 602.4 ms
+0 0.502 0 r
+(def)59.5 592.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(rotation_y)s
+0 g
+(\(theta\):)s
+(  )59.5 582.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( np.matrix\([)s
+(    [ np.cos\(theta\), )59.5 572.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,  np.sin\(theta\)],)s
+(    [)59.5 562.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, )s
+0 0 0.753 r
+(1)s
+0 g
+(, )s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [-np.sin\(theta\), )59.5 552.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,  np.cos\(theta\)])s
+(    ]\))59.5 542.4 ms
+0 0.502 0 r
+(def)59.5 532.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(rotation_x)s
+0 g
+(\(theta\):)s
+(  )59.5 522.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( np.matrix\([)s
+(    [)59.5 512.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(, )s
+0 0 0.753 r
+(0)s
+0 g
+(, )s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 502.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, np.cos\(theta\), -np.sin\(theta\)],)s
+(    [)59.5 492.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, np.sin\(theta\),  np.cos\(theta\)])s
+(    ]\))59.5 482.4 ms
+0.753 0 0 r
+(# define symbolic rotation matricies)59.5 462.4 ms
+0 0.502 0 r
+(def)59.5 452.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_rotation_z)s
+0 g
+(\(theta\):)s
+(  )59.5 442.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( sy.Matrix\([)s
+(    [ sy.cos\(theta\), -sy.sin\(theta\), )59.5 432.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [ sy.sin\(theta\),  sy.cos\(theta\), )59.5 422.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 412.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, )s
+0 0 0.753 r
+(0)s
+0 g
+(, )s
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(    ]\))59.5 402.4 ms
+0 0.502 0 r
+(def)59.5 392.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_rotation_y)s
+0 g
+(\(theta\):)s
+(  )59.5 382.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( sy.Matrix\([)s
+(    [ sy.cos\(theta\), )59.5 372.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,  sy.sin\(theta\)],)s
+(    [)59.5 362.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, )s
+0 0 0.753 r
+(1)s
+0 g
+(, )s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [-sy.sin\(theta\), )59.5 352.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,  sy.cos\(theta\)])s
+(    ]\))59.5 342.4 ms
+0 0.502 0 r
+(def)59.5 332.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_rotation_x)s
+0 g
+(\(theta\):)s
+(  )59.5 322.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( sy.Matrix\([)s
+(    [)59.5 312.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(, )s
+0 0 0.753 r
+(0)s
+0 g
+(, )s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 302.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, sy.cos\(theta\), -sy.sin\(theta\)],)s
+(    [)59.5 292.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, sy.sin\(theta\),  sy.cos\(theta\)])s
+(    ]\))59.5 282.4 ms
+0.753 0 0 r
+(# define numerical translation matricies)59.5 262.4 ms
+0 0.502 0 r
+(def)59.5 252.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(translation_z)s
+0 g
+(\( d\):)s
+(  )59.5 242.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( np.matrix\([)s
+(    [)59.5 232.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 222.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 212.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,d],)s
+(    [)59.5 202.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(    ]\))59.5 192.4 ms
+0 0.502 0 r
+(def)59.5 182.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(translation_y)s
+0 g
+(\( d\):)s
+(  )59.5 172.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( np.matrix\([)s
+(    [)59.5 162.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 152.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,d],)s
+(    [)59.5 142.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 132.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(    ]\))59.5 122.4 ms
+0 0.502 0 r
+(def)59.5 112.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(translation_x)s
+0 g
+(\( d\):)s
+(  )59.5 102.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( np.matrix\([)s
+(    [)59.5 92.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,d],)s
+(    [)59.5 82.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 72.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 62.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(    ]\))59.5 52.4 ms
+re sp
+%%PageTrailer
+%%Page: 2 2
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(../robotics_functions.py                                                      Page 2)59.5 792.4 ms
+F0 sf
+0.753 0 0 r
+(# define symbolic translation matrices)59.5 762.4 ms
+0 0.502 0 r
+(def)59.5 752.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_translation_z)s
+0 g
+(\( d\):)s
+(  )59.5 742.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( sy.Matrix\([)s
+(    [)59.5 732.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 722.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 712.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,d],)s
+(    [)59.5 702.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(    ]\))59.5 692.4 ms
+0 0.502 0 r
+(def)59.5 682.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_translation_y)s
+0 g
+(\( d\):)s
+(  )59.5 672.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( sy.Matrix\([)s
+(    [)59.5 662.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 652.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,d],)s
+(    [)59.5 642.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 632.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(    ]\))59.5 622.4 ms
+0 0.502 0 r
+(def)59.5 612.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_translation_x)s
+0 g
+(\( d\):)s
+(  )59.5 602.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( sy.Matrix\([)s
+(    [)59.5 592.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,d],)s
+(    [)59.5 582.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 572.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(],)s
+(    [)59.5 562.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(    ]\))59.5 552.4 ms
+0.753 0 0 r
+(# numerically convert 3x3 rotation to 4x4 rotation)59.5 542.4 ms
+0 0.502 0 r
+(def)59.5 532.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(convert3x3to4x4)s
+0 g
+(\( matrix\):)s
+(  )59.5 522.4 ms
+0.753 0 0 r
+(# add column of zeroes)s
+0 g
+(  matrix = np.hstack\(\(matrix, np.transpose\([np.zeros\()59.5 512.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(\)]\)\)\))s
+(  )59.5 502.4 ms
+0.753 0 0 r
+(# add row of 0,0,0,1)s
+0 g
+(  matrix = np.vstack\(\(matrix, np.array\([)59.5 492.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(]\)\)\))s
+(  )59.5 482.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( matrix)s
+0.753 0 0 r
+(# symbolically convert 3x3 rotation to 4x4 rotation)59.5 472.4 ms
+0 0.502 0 r
+(def)59.5 462.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(syms_convert3x3to4x4)s
+0 g
+(\( matrix\):)s
+(  )59.5 452.4 ms
+0.753 0 0 r
+(# add column of zeroes)s
+0 g
+(  matrix = sy.Matrix.hstack\(matrix, sy.Matrix\(sy.zeros\()59.5 442.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(\)[:,)s
+0 0 0.753 r
+(2)s
+0 g
+(]\)\))s
+(  )59.5 432.4 ms
+0.753 0 0 r
+(# add row of 0,0,0,1)s
+0 g
+(  matrix = sy.Matrix.vstack\(\(matrix, sy.Matrix\([)59.5 422.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(1)s
+0 g
+(]\).T\)\))s
+(  )59.5 412.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( matrix)s
+0 0.502 0 r
+(def)59.5 392.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(denavit_hartenberg)s
+0 g
+(\( link\):)s
+(  )59.5 382.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( \()s
+(    translation_z\(link[)59.5 372.4 ms
+0 0 0.753 r
+(2)s
+0 g
+(]\)*convert3x3to4x4\(rotation_z\(link[)s
+0 0 0.753 r
+(3)s
+0 g
+(]\)\)*)s
+(    translation_x\(link[)59.5 362.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(]\)*convert3x3to4x4\(rotation_x\(link[)s
+0 0 0.753 r
+(1)s
+0 g
+(]\)\))s
+(    \))59.5 352.4 ms
+0 0.502 0 r
+(def)59.5 342.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_denavit_hartenberg)s
+0 g
+(\( link\):)s
+(  )59.5 332.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( \()s
+(    sym_translation_z\(link[)59.5 322.4 ms
+0 0 0.753 r
+(2)s
+0 g
+(]\)*sy.Matrix\(syms_convert3x3to4x4\(sym_rotation_z\(link[)s
+0 0 0.753 r
+(3)s
+0 g
+(])s
+(\)\)\)*)59.5 312.4 ms
+(    sym_translation_x\(link[)59.5 302.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(]\)*sy.Matrix\(syms_convert3x3to4x4\(sym_rotation_x\(link[)s
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(\)\)\))59.5 292.4 ms
+(    \))59.5 282.4 ms
+0 0.502 0 r
+(def)59.5 262.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(get_A0n)s
+0 g
+(\( link_list\):)s
+(  A0i = np.identity\()59.5 252.4 ms
+0 0 0.753 r
+(4)s
+0 g
+(\))s
+(  A0n = [])59.5 242.4 ms
+(  )59.5 232.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( link )s
+0 0.502 0 r
+(in)s
+0 g
+( link_list:)s
+(    A0i = A0i*denavit_hartenberg\( link\))59.5 222.4 ms
+(    A0n.append\(A0i\))59.5 212.4 ms
+(  )59.5 202.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( A0n)s
+0 0.502 0 r
+(def)59.5 182.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_get_A0n)s
+0 g
+(\( link_list\):)s
+(  A0i = np.identity\()59.5 172.4 ms
+0 0 0.753 r
+(4)s
+0 g
+(\))s
+(  A0n = [])59.5 162.4 ms
+(  )59.5 152.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( link )s
+0 0.502 0 r
+(in)s
+0 g
+( link_list:)s
+(    A0i = A0i*sym_denavit_hartenberg\( link\))59.5 142.4 ms
+(    A0n.append\(A0i\))59.5 132.4 ms
+(  )59.5 122.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( A0n)s
+0 0.502 0 r
+(def)59.5 102.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(get_A0i)s
+0 g
+(\(\):)s
+(  A0i = [])59.5 92.4 ms
+(  )59.5 82.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( link )s
+0 0.502 0 r
+(in)s
+0 g
+( link_list:)s
+(    A0i.append\(denavit_hartenberg\( link\)\))59.5 72.4 ms
+(  )59.5 62.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( A0i)s
+re sp
+%%PageTrailer
+%%Page: 3 3
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(../robotics_functions.py                                                      Page 3)59.5 792.4 ms
+F0 sf
+0 0.502 0 r
+(def)59.5 772.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_get_A0i)s
+0 g
+(\(link_list\):)s
+(  A0i = [])59.5 762.4 ms
+(  )59.5 752.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( link )s
+0 0.502 0 r
+(in)s
+0 g
+( link_list:)s
+(    A0i.append\(sym_denavit_hartenberg\( link\)\))59.5 742.4 ms
+(  )59.5 732.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( A0i)s
+0 0.502 0 r
+(def)59.5 702.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(end_jacobian)s
+0 g
+(\( link_list\):)s
+(  A0n = get_A0n\( link_list\))59.5 692.4 ms
+(  )59.5 682.4 ms
+0.753 0 0 r
+(# rotational vectors)s
+0 g
+(  R = [np.matrix\(np.identity\()59.5 672.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(\)\)])s
+(  R = R + [end[:)59.5 662.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(,:)s
+0 0 0.753 r
+(3)s
+0 g
+(] )s
+0 0.502 0 r
+(for)s
+0 g
+( end )s
+0 0.502 0 r
+(in)s
+0 g
+( A0n])s
+(  )59.5 652.4 ms
+0.753 0 0 r
+(# positions of each end effector)s
+0 g
+(  O = [sy.Matrix\([[)59.5 642.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(]]\)])s
+(  O = O + [np.matrix\(end[:,)59.5 632.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(][:)s
+0 0 0.753 r
+(3)s
+0 g
+(]\) )s
+0 0.502 0 r
+(for)s
+0 g
+( end )s
+0 0.502 0 r
+(in)s
+0 g
+( A0n])s
+(  )59.5 622.4 ms
+0.753 0 0 r
+(# unit z vector)s
+0 g
+(  k = np.matrix\([[)59.5 612.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(1)s
+0 g
+(]]\))s
+(  J_v = [])59.5 602.4 ms
+(  J_w = [])59.5 592.4 ms
+(  )59.5 582.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(A0n\)\):)s
+(    )59.5 572.4 ms
+0.753 0 0 r
+(# if theta_i is 0 then joint is prismatic)s
+0 g
+(    )59.5 562.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( \(link_list[i][)s
+0 0 0.753 r
+(3)s
+0 g
+(] == )s
+0 0 0.753 r
+(0)s
+0 g
+(\):)s
+(      J_v.append\(sy.Matrix\(R[i]*k\)\))59.5 552.4 ms
+(      J_w.append\(sy.Matrix\([[)59.5 542.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(]]\)\))s
+(    )59.5 532.4 ms
+0.753 0 0 r
+(# if theta_i is not 0 then joint is revolute)s
+0 g
+(    )59.5 522.4 ms
+0 0.502 0 r
+(else)s
+0 g
+(:)s
+(      J_v.append\( np.matrix\(np.cross\( \(R[i]*k\).T, \(O[-)59.5 512.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(]-O[i]\).T\)\).T \))s
+(      J_w.append\(np.matrix\(R[i]*k\)\))59.5 502.4 ms
+(  J = [np.vstack\( \(J_v[i], J_w[i]\)\) )59.5 492.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(J_v\)\)])s
+(  J = np.hstack\(J\))59.5 482.4 ms
+(  )59.5 472.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( J)s
+0 0.502 0 r
+(def)59.5 442.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_end_jacobian)s
+0 g
+(\( link_list\):)s
+(  A0n = sym_get_A0n\( link_list\))59.5 432.4 ms
+(  )59.5 422.4 ms
+0.753 0 0 r
+(# rotational vectors)s
+0 g
+(  R = [sy.Matrix\(np.identity\()59.5 412.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(\)\)])s
+(  R = R + [end[:)59.5 402.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(,:)s
+0 0 0.753 r
+(3)s
+0 g
+(] )s
+0 0.502 0 r
+(for)s
+0 g
+( end )s
+0 0.502 0 r
+(in)s
+0 g
+( A0n])s
+(  )59.5 392.4 ms
+0.753 0 0 r
+(# positions of each end effector)s
+0 g
+(  O = [sy.Matrix\([[)59.5 382.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(]]\)])s
+(  O = O + [sy.Matrix\(end[:,)59.5 372.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(][:)s
+0 0 0.753 r
+(3)s
+0 g
+(]\) )s
+0 0.502 0 r
+(for)s
+0 g
+( end )s
+0 0.502 0 r
+(in)s
+0 g
+( A0n])s
+(  )59.5 362.4 ms
+0.753 0 0 r
+(# unit z vector)s
+0 g
+(  k = sy.Matrix\([[)59.5 352.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(1)s
+0 g
+(]]\))s
+(  J_v = [])59.5 342.4 ms
+(  J_w = [])59.5 332.4 ms
+(  )59.5 322.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(A0n\)\):)s
+(    )59.5 312.4 ms
+0.753 0 0 r
+(# if theta_i is 0 then joint is prismatic)s
+0 g
+(    )59.5 302.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( \(link_list[i][)s
+0 0 0.753 r
+(3)s
+0 g
+(] == )s
+0 0 0.753 r
+(0)s
+0 g
+(\):)s
+(      J_v.append\(sy.Matrix\(R[i]*k\)\))59.5 292.4 ms
+(      J_w.append\(sy.Matrix\([[)59.5 282.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(]]\)\))s
+(    )59.5 272.4 ms
+0.753 0 0 r
+(# if theta_i is not 0 then joint is revolute)s
+0 g
+(    )59.5 262.4 ms
+0 0.502 0 r
+(else)s
+0 g
+(:)s
+(      J_v.append\(\(sy.Matrix\(R[i]*k\).cross\(O[-)59.5 252.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(]-O[i]\)\)\))s
+(      J_w.append\(sy.Matrix\(R[i]*k\)\))59.5 242.4 ms
+(  J = [sy.Matrix.vstack\( J_v[i], J_w[i]\) )59.5 232.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(J_v\)\)])s
+(  J = sy.Matrix.hstack\(J\))59.5 222.4 ms
+(  Je= J[)59.5 212.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(])s
+(  )59.5 202.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(J\)-)s
+0 0 0.753 r
+(1)s
+0 g
+(\):)s
+(    j = i+)59.5 192.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(    Je = sy.Matrix.hstack\(Je, J[j]\))59.5 182.4 ms
+(  )59.5 172.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( Je)s
+0 0.502 0 r
+(def)59.5 152.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_cm_jacobian)s
+0 g
+(\(link_list\):)s
+(  )59.5 142.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0 r
+(#Jcm)s
+0 0.502 0 r
+(def)59.5 122.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_pt_jacobian)s
+0 g
+(\(link_list_position\):)s
+(  k = sy.Matrix\([[)59.5 112.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(1)s
+0 g
+(]]\))s
+(  [link_list, pt_list] = link_list_position)59.5 102.4 ms
+(  A0i = sym_get_A0n\(link_list\))59.5 92.4 ms
+(  O0i = [A0i[i]*pt_list[i] )59.5 82.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.502 0.502 0 r
+(type)s
+0 g
+(\(pt_list[i]\)== )s
+0.502 0.502 0 r
+(type)s
+0 g
+(\(A0i[i]\) )s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+(      sy.Matrix\(A0i[i][:,)59.5 72.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(][:)s
+0 0 0.753 r
+(3)s
+0 g
+(]\) )s
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(A0i\)\) ])s
+(  A0i = [sy.eye\()59.5 62.4 ms
+0 0 0.753 r
+(4)s
+0 g
+(\)]+A0i)s
+(  Jpt = [])59.5 52.4 ms
+re sp
+%%PageTrailer
+%%Page: 4 4
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(../robotics_functions.py                                                      Page 4)59.5 792.4 ms
+F0 sf
+(  )59.5 772.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(link_list\)\):)s
+(    j_pt = [])59.5 762.4 ms
+(    jci = sy.Matrix\(np.zeros\()59.5 752.4 ms
+0 0 0.753 r
+(6)s
+0 g
+(\)\).T)s
+(    )59.5 742.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( j )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(link_list\)\):)s
+(      )59.5 732.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( j <= i:)s
+(        )59.5 722.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0 0.502 0 r
+(not)s
+0 g
+( link_list[i][-)s
+0 0 0.753 r
+(1)s
+0 g
+(] == )s
+0 0 0.753 r
+(0)s
+0 g
+(:)s
+(          j_pt.append\( sy.Matrix.vstack\(\(A0i[j][:)59.5 712.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(,:)s
+0 0 0.753 r
+(3)s
+0 g
+(]*k\).cross\()s
+(            sy.Matrix\(O0i[i][:)59.5 702.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(]\)-sy.Matrix\(A0i[j][:,)s
+0 0 0.753 r
+(3)s
+0 g
+(][:)s
+0 0 0.753 r
+(3)s
+0 g
+(]\)\),)s
+(            A0i[j][:)59.5 692.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(,:)s
+0 0 0.753 r
+(3)s
+0 g
+(]*k\))s
+(            \))59.5 682.4 ms
+(        )59.5 672.4 ms
+0 0.502 0 r
+(else)s
+0 g
+(:)s
+(          j_pt.append\( sy.Matrix.vstack\(A0i[j][:)59.5 662.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(,:)s
+0 0 0.753 r
+(3)s
+0 g
+(]*k, sy.Matrix\([[)s
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(],[)s
+0 0 0.753 r
+(0)s
+0 g
+(]]\)\)\))s
+(      )59.5 652.4 ms
+0 0.502 0 r
+(else)s
+0 g
+(:)s
+(        j_pt.append\( sy.Matrix\(np.zeros\()59.5 642.4 ms
+0 0 0.753 r
+(6)s
+0 g
+(\)\).T\))s
+(    q = j_pt[)59.5 632.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(])s
+(    )59.5 622.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(j_pt\)-)s
+0 0 0.753 r
+(1)s
+0 g
+(\):)s
+(      j = i+)59.5 612.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(      q = sy.Matrix.hstack\(q, j_pt[j]\))59.5 602.4 ms
+(    Jpt.append\(q\))59.5 592.4 ms
+(  )59.5 582.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( Jpt)s
+0.753 0 0 r
+(#def rotational_velocity_jacobian\( link_list\))59.5 542.4 ms
+(#def jacobian\(link_list\))59.5 532.4 ms
+0 0.502 0 r
+(def)59.5 522.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(D_i)s
+0 g
+(\( vec\):)s
+(  [Ji, Mi, Ii, Ri] = vec)59.5 512.4 ms
+(  Jv = Ji[:)59.5 502.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(,:])s
+(  Jw = Ji[)59.5 492.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(:,:])s
+(  )59.5 482.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( Jv.T*Mi*Jv + Jw.T*Ri*Ii*Ri.T*Jw)s
+0.753 0 0 r
+(# need a function to return the F from the lagrangian and a list of all the time dep)59.5 452.4 ms
+(endent variables)59.5 442.4 ms
+0 0.502 0 r
+(def)59.5 432.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_lagrangian)s
+0 g
+(\(link_list_cm, M, I, qdot\):)s
+(  g = sy.Matrix\([[)59.5 422.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(],[gravity],[)s
+0 0 0.753 r
+(0)s
+0 g
+(]]\))s
+(  [link_list, Ocm] = link_list_cm)59.5 412.4 ms
+(  A = sym_get_A0n\(link_list\))59.5 402.4 ms
+(  R = [Ai[:)59.5 392.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(,:)s
+0 0 0.753 r
+(3)s
+0 g
+(] )s
+0 0.502 0 r
+(for)s
+0 g
+( Ai )s
+0 0.502 0 r
+(in)s
+0 g
+( A])s
+(  O = [sy.Matrix\(Ai[:,)59.5 382.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(][:)s
+0 0 0.753 r
+(3)s
+0 g
+(]\) )s
+0 0.502 0 r
+(for)s
+0 g
+( Ai )s
+0 0.502 0 r
+(in)s
+0 g
+( A])s
+(  J = sym_pt_jacobian\(link_list_cm\))59.5 372.4 ms
+(  D = symsum\([D_i\([ J[i], M[i], I[i], R[i]]\) )59.5 362.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\( )s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(J\)\)]\))s
+(  K = )59.5 352.4 ms
+0 0 0.753 r
+(.5)s
+0 g
+(*\(qdot.T*\(D\)*qdot\))s
+(  O0c = [A[i]*Ocm[i] )59.5 342.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(A\)\)])s
+(  P = symsum\( [g.T*M[i]*sy.Matrix\(O0c[i][:)59.5 332.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(]\) )s
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(J\)\)]\))s
+(  )59.5 322.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( K-P)s
+0 0.502 0 r
+(def)59.5 302.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(sym_torque)s
+0 g
+(\(link_list_cm, M, I, qdot, q, tdv_vec\):)s
+(  L = sym_lagrangian\(link_list_cm, M, I, qdot\)[)59.5 292.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(])s
+(  dLdq_dot = )59.5 282.4 ms
+0.502 0.502 0 r
+(sum)s
+0 g
+(\([sy.diff\(L, qdot[i]\) )s
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(qdot\)\)]\))s
+(  dLdq =  )59.5 272.4 ms
+0.502 0.502 0 r
+(sum)s
+0 g
+(\([sy.diff\(L, q[i]\) )s
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(q\)\)]\))s
+(  ddtdLdq_dot = )59.5 262.4 ms
+0.502 0.502 0 r
+(sum)s
+0 g
+(\([sy.diff\(dLdq_dot, tdv_vec[i][)s
+0 0 0.753 r
+(0)s
+0 g
+(]\)*tdv_vec[i][)s
+0 0 0.753 r
+(1)s
+0 g
+(] )s
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(l)s
+(en)59.5 252.4 ms
+0 g
+(\(tdv_vec\)\)]\))s
+(  )59.5 242.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( ddtdLdq_dot - dLdq)s
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 4
+%%EOF
+

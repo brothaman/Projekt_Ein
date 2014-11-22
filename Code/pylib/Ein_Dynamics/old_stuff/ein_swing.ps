@@ -1,0 +1,899 @@
+%!PS-Adobe-3.0
+%%Title: ein_swinging.py
+%%For: robertbrothers
+%%Creator: VIM - Vi IMproved 7.3 (2010 Aug 15)
+%%CreationDate: Sun Oct 26 13:46:21 2014
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 59 49 564 800
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate color
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: A4
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /usr/share/vim/vim73/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /usr/share/vim/vim73/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+595 842 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(ein_swinging.py                                                               Page 1)59.5 792.4 ms
+F0 sf
+0.753 0 0 r
+(#!/usr/bin/env python)59.5 772.4 ms
+0.753 0 0.753 r
+(import)59.5 752.4 ms
+0 g
+( numpy )s
+0 0.502 0 r
+(as)s
+0 g
+( np, Kinematic_Characteristics )s
+0 0.502 0 r
+(as)s
+0 g
+( kc)s
+0.753 0 0.753 r
+(import)59.5 742.4 ms
+0 g
+( matplotlib.pyplot )s
+0 0.502 0 r
+(as)s
+0 g
+( plt)s
+0.753 0 0.753 r
+(from)59.5 732.4 ms
+0 g
+( mpl_toolkits.mplot3d )s
+0.753 0 0.753 r
+(import)s
+0 g
+( Axes3D)s
+(gravity = )59.5 712.4 ms
+0 0 0.753 r
+(9.81)s
+0.753 0 0 r
+(# function to calculate instantaneous rotational characteristic)59.5 692.4 ms
+0 0.502 0 r
+(def)59.5 682.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(atorquei)s
+0 g
+(\(alpha, length_to_cg, mass, theta\):)s
+(  )59.5 672.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( mass*length_to_cg*\(alpha-gravity*np.sin\(theta\)\))s
+0 0.502 0 r
+(def)59.5 662.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(thetatt)s
+0 g
+(\(torque, length_to_cg, mass, theta\):)s
+(  )59.5 652.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( torque/\(length_to_cg*mass\)+gravity*np.sin\(theta\))s
+0 0.502 0 r
+(def)59.5 642.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(thetat)s
+0 g
+(\(theta_tt, current_time, previous_time, theta_t\):)s
+(  )59.5 632.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( theta_tt*\(current_time-previous_time\) + theta_t)s
+0 0.502 0 r
+(def)59.5 622.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(theta)s
+0 g
+(\(theta_tt, theta_t, theta_i, current_time, previous_time\):)s
+(  )59.5 612.4 ms
+0.502 0.502 0 r
+(print)s
+0 g
+( \(theta_tt*\(current_time-previous_time\)**)s
+0 0 0.753 r
+(2)s
+0 g
+(/)s
+0 0 0.753 r
+(2)s
+0 g
+( + theta_t *\(current_time - previ)s
+(ous_time\),)59.5 602.4 ms
+(      theta_i\))59.5 592.4 ms
+0.753 0 0 r
+(# print \()59.5 582.4 ms
+(#     \(theta_tt*\(current_time**2-previous_time**2\)/2, theta_tt\),)59.5 572.4 ms
+(#     \(theta_t *\(current_time - previous_time\), theta_t\),)59.5 562.4 ms
+(#     theta_i, \(current_time, previous_time\))59.5 552.4 ms
+(#      \))59.5 542.4 ms
+0 g
+(  )59.5 532.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( \()s
+(    theta_tt*\(current_time-previous_time\)**)59.5 522.4 ms
+0 0 0.753 r
+(2)s
+0 g
+(/)s
+0 0 0.753 r
+(2)s
+0 g
+( +)s
+(    theta_t *\(current_time - previous_time\) +)59.5 512.4 ms
+(    theta_i)59.5 502.4 ms
+(    \))59.5 492.4 ms
+0.753 0 0 r
+(# calulate dynamic characteristics with constant acceleration calculating motor )59.5 482.4 ms
+(# - torque)59.5 472.4 ms
+0 0.502 0 r
+(def)59.5 462.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(update_rotational)s
+0 g
+(\( alpha, mass, iterations, initial_time, final_time, initial_po)s
+(sition,)59.5 452.4 ms
+(    length_to_cg\):)59.5 442.4 ms
+(  )59.5 432.4 ms
+0.753 0 0 r
+(# set up initial conditions)s
+0 g
+(  time_limit = final_time-initial_time)59.5 422.4 ms
+(  direction = )59.5 412.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(  theta_i, theta_t, theta_tt, torque = initial_position, )59.5 402.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, -alpha, )s
+0 0 0.753 r
+(0)s
+0 g
+(  step_size = time_limit/)59.5 392.4 ms
+0.502 0.502 0 r
+(float)s
+0 g
+(\(iterations\))s
+(  time = np.arange\()59.5 382.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(, \(time_limit + step_size\), step_size\))s
+(  position = np.array\([]\))59.5 372.4 ms
+(  velocity = np.array\([]\))59.5 362.4 ms
+(  motor_torque = np.array\([]\))59.5 352.4 ms
+(  posi = np.array\([]\))59.5 342.4 ms
+(  switch = )59.5 332.4 ms
+0.502 0.502 0 r
+(False)s
+0 g
+(  )59.5 322.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( i )s
+0 0.502 0 r
+(in)s
+0 g
+( )s
+0.502 0.502 0 r
+(range)s
+0 g
+(\()s
+0.502 0.502 0 r
+(len)s
+0 g
+(\(time\)\):)s
+(    current_time = time[i])59.5 312.4 ms
+(    previous_time = time[i-)59.5 302.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(])s
+(    )59.5 292.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( i == )s
+0 0 0.753 r
+(0)s
+0 g
+(:)s
+(      previous_time = current_time)59.5 282.4 ms
+(    theta_i = theta\(theta_tt, theta_t, theta_i, current_time, previous_time\))59.5 272.4 ms
+(    theta_t = thetat\(theta_tt, current_time, previous_time, theta_t\))59.5 262.4 ms
+(    torque  = atorquei\(theta_tt, length_to_cg, mass, theta_i\))59.5 252.4 ms
+(    j = i-)59.5 242.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(    )59.5 232.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( i > )s
+0 0 0.753 r
+(0)s
+0 g
+(:)s
+(      )59.5 222.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( \()s
+(          \(\(position[j] < )59.5 212.4 ms
+0 0 0.753 r
+(0)s
+0 g
+( )s
+0 0.502 0 r
+(and)s
+0 g
+( position[j-)s
+0 0 0.753 r
+(1)s
+0 g
+(] > )s
+0 0 0.753 r
+(0)s
+0 g
+(\) )s
+0 0.502 0 r
+(or)s
+0 g
+( )s
+(            \(position[j] > )59.5 202.4 ms
+0 0 0.753 r
+(0)s
+0 g
+( )s
+0 0.502 0 r
+(and)s
+0 g
+( position[j-)s
+0 0 0.753 r
+(1)s
+0 g
+(] < )s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) )s
+0 0.502 0 r
+(and)s
+0 g
+(          switch == )59.5 192.4 ms
+0.502 0.502 0 r
+(False)s
+0 g
+(\):)s
+(        switch = )59.5 182.4 ms
+0.502 0.502 0 r
+(True)s
+0 g
+(        theta_tt = -)59.5 172.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(*thetatt\(torque, length_to_cg, mass, theta_i\))s
+(      )59.5 162.4 ms
+0 0.502 0 r
+(else)s
+0 g
+(:)s
+(        switch = )59.5 152.4 ms
+0.502 0.502 0 r
+(False)s
+0 g
+(        theta_tt = thetatt\(torque, length_to_cg, mass, theta_i\))59.5 142.4 ms
+(    )59.5 132.4 ms
+0 0.502 0 r
+(else)s
+0 g
+(:)s
+(      theta_tt = thetatt\(torque, length_to_cg, mass, theta_i\))59.5 122.4 ms
+0.753 0 0 r
+(#   print theta_tt)59.5 102.4 ms
+0 g
+(    )59.5 92.4 ms
+0.753 0 0 r
+(# append values to arrays)s
+0 g
+(    position = np.hstack\(\(position, np.array\([theta_i]\)\)\))59.5 82.4 ms
+(    velocity = np.hstack\(\(velocity, np.array\([theta_t]\)\)\))59.5 72.4 ms
+(    motor_torque = np.hstack\(\(motor_torque, np.array\([torque]\)\)\))59.5 62.4 ms
+(  )59.5 52.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( time, position, velocity, motor_torque)s
+re sp
+%%PageTrailer
+%%Page: 2 2
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(ein_swinging.py                                                               Page 2)59.5 792.4 ms
+F0 sf
+0.753 0 0 r
+(# get the calculate the necessary values)59.5 772.4 ms
+0 0.502 0 r
+(def)59.5 762.4 ms
+0 g
+( )s
+0.502 0.502 0 r
+(get_requirement)s
+0 g
+(\(\):)s
+(  )59.5 752.4 ms
+0.753 0 0 r
+(# calc values)s
+0 g
+(  length_of_leg = )59.5 742.4 ms
+0 0 0.753 r
+(.5)s
+0 g
+(  dx = )59.5 732.4 ms
+0 0 0.753 r
+(2)s
+0 g
+(*length_of_leg*np.sin\()s
+0 0 0.753 r
+(15.0)s
+0 g
+(*np.pi/)s
+0 0 0.753 r
+(180)s
+0 g
+(\))s
+(  vx = )59.5 722.4 ms
+0 0 0.753 r
+(.5)s
+0 g
+(  time_of_swing = dx/vx)59.5 712.4 ms
+(  dt0 = \()59.5 702.4 ms
+0 0 0.753 r
+(15.0)s
+0 g
+(-)s
+0 0 0.753 r
+(0.0)s
+0 g
+(\)*np.pi/)s
+0 0 0.753 r
+(180.0)s
+0 g
+(  dt1 = \()59.5 692.4 ms
+0 0 0.753 r
+(0.0)s
+0 g
+(-)s
+0 0 0.753 r
+(15.0)s
+0 g
+(\)*np.pi/)s
+0 0 0.753 r
+(180.0)s
+0 g
+(  alpha0 = )59.5 682.4 ms
+0 0 0.753 r
+(2)s
+0 g
+(*\(dt0-dt1\)/\( time_of_swing\)**)s
+0 0 0.753 r
+(2)s
+0 g
+(  alpha1 = )59.5 672.4 ms
+0 0 0.753 r
+(2)s
+0 g
+(*dt1/\( time_of_swing/)s
+0 0 0.753 r
+(2)s
+0 g
+(\)**)s
+0 0 0.753 r
+(2)s
+0 g
+(  iterations = )59.5 662.4 ms
+0 0 0.753 r
+(1000)s
+0 g
+(  )59.5 652.4 ms
+0.753 0 0 r
+(# mass of the leg 1.0292kg)s
+0 g
+(  mass_of_leg = )59.5 642.4 ms
+0 0 0.753 r
+(1.0292)s
+0 g
+(  )59.5 632.4 ms
+0.753 0 0 r
+(# declare position vectors)s
+0 g
+(  )59.5 622.4 ms
+0.753 0 0 r
+(#determine necessary rotational acceleration)s
+0 g
+(  rotational_chars = update_rotational\( alpha0, mass_of_leg, iterations, )59.5 612.4 ms
+(      )59.5 602.4 ms
+0 0 0.753 r
+(0.0)s
+0 g
+(, )s
+0 0 0.753 r
+(20)s
+0 g
+(*time_of_swing, dt0, )s
+0 0 0.753 r
+(.258)s
+0 g
+(  \))s
+(  )59.5 592.4 ms
+(  )59.5 582.4 ms
+0.502 0.502 0 r
+(print)s
+0 g
+( )s
+0.502 0.502 0 r
+(max)s
+0 g
+(\(rotational_chars[)s
+0 0 0.753 r
+(3)s
+0 g
+(]\), )s
+0.502 0.502 0 r
+(min)s
+0 g
+(\(rotational_chars[)s
+0 0 0.753 r
+(3)s
+0 g
+(]\))s
+(  )59.5 562.4 ms
+0.502 0.502 0 r
+(print)s
+0 g
+( )s
+0 0 0.753 r
+("alpha is: ")s
+0 g
+( + )s
+0.502 0.502 0 r
+(str)s
+0 g
+(\(alpha0\))s
+(  )59.5 552.4 ms
+0.502 0.502 0 r
+(print)s
+0 g
+( )s
+0 0 0.753 r
+("time of swing: ")s
+0 g
+( +)s
+0.502 0.502 0 r
+(str)s
+0 g
+(\(time_of_swing\))s
+(  )59.5 542.4 ms
+0.502 0.502 0 r
+(print)s
+0 g
+(\()s
+0 0 0.753 r
+("range of rotation is from: ")s
+0 g
+(+ )s
+0.502 0.502 0 r
+(str)s
+0 g
+(\(dt0\)+ )s
+(      )59.5 532.4 ms
+0 0 0.753 r
+(" to: ")s
+0 g
+( + )s
+0.502 0.502 0 r
+(str)s
+0 g
+(\(dt1\)\))s
+(  )59.5 522.4 ms
+0.502 0.502 0 r
+(print)s
+0 g
+( )s
+0 0 0.753 r
+("the mass of the leg is: ")s
+0 g
+( + )s
+0.502 0.502 0 r
+(str)s
+0 g
+(\(mass_of_leg\))s
+(  )59.5 512.4 ms
+0.502 0.502 0 r
+(print)s
+0 g
+( \()s
+0 0 0.753 r
+("the max and min positions: ")s
+0 g
+( + )s
+0.502 0.502 0 r
+(str)s
+0 g
+(\()s
+0.502 0.502 0 r
+(max)s
+0 g
+(\(rotational_chars[)s
+0 0 0.753 r
+(1)s
+0 g
+(]\)\) + )s
+0 0 0.753 r
+(", ")s
+0 g
+( + )s
+(      )59.5 502.4 ms
+0.502 0.502 0 r
+(str)s
+0 g
+(\()s
+0.502 0.502 0 r
+(min)s
+0 g
+(\(rotational_chars[)s
+0 0 0.753 r
+(1)s
+0 g
+(]\)\) \))s
+(  )59.5 492.4 ms
+0.502 0.502 0 r
+(print)s
+0 g
+( \()s
+0 0 0.753 r
+("the max and min velocity: ")s
+0 g
+( + )s
+0.502 0.502 0 r
+(str)s
+0 g
+(\()s
+0.502 0.502 0 r
+(max)s
+0 g
+(\(rotational_chars[)s
+0 0 0.753 r
+(2)s
+0 g
+(]\)\) + )s
+0 0 0.753 r
+(", ")s
+0 g
+( + )s
+(      )59.5 482.4 ms
+0.502 0.502 0 r
+(str)s
+0 g
+(\()s
+0.502 0.502 0 r
+(min)s
+0 g
+(\(rotational_chars[)s
+0 0 0.753 r
+(2)s
+0 g
+(]\)\) \))s
+(  )59.5 472.4 ms
+0.502 0.502 0 r
+(print)s
+0 g
+( \()s
+0 0 0.753 r
+("the max and min acceleration: ")s
+0 g
+( + )s
+0.502 0.502 0 r
+(str)s
+0 g
+(\()s
+0.502 0.502 0 r
+(max)s
+0 g
+(\(rotational_chars[)s
+0 0 0.753 r
+(3)s
+0 g
+(]\)\) + )s
+0 0 0.753 r
+(", ")s
+0 g
+( + )s
+(      )59.5 462.4 ms
+0.502 0.502 0 r
+(str)s
+0 g
+(\()s
+0.502 0.502 0 r
+(min)s
+0 g
+(\(rotational_chars[)s
+0 0 0.753 r
+(3)s
+0 g
+(]\)\) \))s
+(  )59.5 442.4 ms
+0.753 0 0 r
+(#plot some fancies)s
+0 g
+(  posi = plt.plot\()59.5 432.4 ms
+(      rotational_chars[)59.5 422.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(], rotational_chars[)s
+0 0 0.753 r
+(1)s
+0 g
+(], color=)s
+0 0 0.753 r
+('r')s
+0 g
+(, )s
+(      linewidth=)59.5 412.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(, label=)s
+0 0 0.753 r
+(r'Position of cg')s
+0.753 0 0 r
+(# position)s
+0 g
+(      \))59.5 402.4 ms
+(  velo = plt.plot\()59.5 392.4 ms
+(      rotational_chars[)59.5 382.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(], rotational_chars[)s
+0 0 0.753 r
+(2)s
+0 g
+(], color=)s
+0 0 0.753 r
+('b')s
+0 g
+(,)s
+(      linewidth=)59.5 372.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(, label=)s
+0 0 0.753 r
+(r'Velocity of cg')s
+0.753 0 0 r
+(# velocity)s
+0 g
+(      \))59.5 362.4 ms
+(  acce = plt.plot\()59.5 352.4 ms
+(      rotational_chars[)59.5 342.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(], rotational_chars[)s
+0 0 0.753 r
+(3)s
+0 g
+(], color=)s
+0 0 0.753 r
+('m')s
+0 g
+(,)s
+(      label=)59.5 332.4 ms
+0 0 0.753 r
+(r'Torque for Constant $\\alpha$')s
+0.753 0 0 r
+(# acceleration)s
+0 g
+(      \))59.5 322.4 ms
+(  plt.legend\(loc=)59.5 312.4 ms
+0 0 0.753 r
+(4)s
+0 g
+(\))s
+(  plt.xlabel\()59.5 302.4 ms
+0 0 0.753 r
+('Time \(s\)')s
+0 g
+(\))s
+(  plt.ylabel\()59.5 292.4 ms
+0 0 0.753 r
+(r'Kinematic Characteristic Values')s
+0 g
+(\))s
+(  plt.title\()59.5 282.4 ms
+0 0 0.753 r
+('Position, Velocity and Torque as a Function of Time')s
+0 g
+(\))s
+(  plt.show\(\))59.5 272.4 ms
+(  )59.5 262.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0 0.502 0 r
+(if)59.5 232.4 ms
+0 g
+( __name__ == )s
+0 0 0.753 r
+("__main__")s
+0 g
+(:)s
+(  get_requirement\(\))59.5 222.4 ms
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 2
+%%EOF
+

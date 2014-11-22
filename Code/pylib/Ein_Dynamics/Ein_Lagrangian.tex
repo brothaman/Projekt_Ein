@@ -1,0 +1,213 @@
+\documentclass[10pt]{article}
+\usepackage{setspace}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{chngpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{boxedminipage}
+
+\title{The Euler-Lagrangian of the Ein Concept \LaTeX}
+\author{Robert Brothers Mechanical Engineering Student @ UTSA}
+\begin{document}
+\doublespacing
+\footnotesize
+\maketitle
+\date
+
+\abstract{Using the Denavit-Hartenberg Parameters the Lagrangian of Ein was Calculated to be L}
+
+\section{Question: The Lagrangian}
+\subsection{question about the lagrangian}
+when i take the derivative of the lagrangian w/ respect to q
+do i take the derivative of each q? 
+and are the dependent on one another?
+if i differentiate $q_{1}q_{2}$ with respect to $q_{1}$ what do i get?
+
+\begin{equation}
+M_{i} = 
+\begin{bmatrix}
+m_{i} & 0 & 0 \\
+0 & m_{i} & 0 \\
+0 & 0 & m_{i} \\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+I_{b,i} = 
+\begin{bmatrix}
+I_{x} & 0 & 0 \\
+0 & I_{y} & 0 \\
+0 & 0 & I_{z} \\
+\end{bmatrix}
+\end{equation}
+
+
+
+\begin{equation}
+L & = & K & - & P
+\end{equation}
+
+\begin{equation}
+K & = & \frac{M_{i}V_{i}^{2}}{2} = 
+\frac{1}{2}\dot{q^{T}}\left[\sum\limits_{i=1}^{n} M_{i}J_{v,i}^{T}J_{v,i} + \\
+J_{\omega,i}^{T}R_{i}I_{b,i}R_{i}^{T}J_{\omega,i}\right]\dot{q}
+\end{equation} 
+
+\begin{equation}
+J_{i} = 
+\begin{bmatrix}
+J_{v,i} \\
+J_{\omega,i}\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+J_{v_{0}} & J_{v_{1}} & \dots & J_{v_{n}} \\
+J_{\omega_{0}} & J_{\omega_{1}} & \dots & J_{\omega_{n}}
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+P & = & M_{i}gh\\
+= \sum\limits_{i=1}^{n} \vec{g}^{T} M_{i} \vec{r}_{c,i}
+\end{equation}
+
+
+\section{Results}
+
+\subsection{Denavit-Hartenberg Parameters}
+\begin{center}
+\begin{tabular}{| 1 | p{1cm} | p{1cm} | p{1cm} | p{1cm} |}
+\hline
+Link_{i} & a_{i} & $\alpha_{i}$ & d_{i} & $\theta_{i}$ \\ \hline
+1 & 0 & $\frac{\pi}{2}$ & 0 & $\theta_{t}$ \\ \hline
+2 & 0 & 0 & L_{s} & 0 \\ \hline
+\end{tabular}
+\end{center}
+
+
+
+\subsection{Jacobian}
+
+\subsubsection{Jacobian of Link One's Center of Mass}
+\begin{equation}
+J_{1} = 
+\left[\begin{matrix}
+0.5 l_{1} \sin{\left (q_{1} \right )} & 0\\
+- 0.5 l_{1} \cos{\left (q_{1} \right )} & 0\\
+0 & 0\\
+0 & 0\\
+0 & 0\\
+1 & 0
+\end{matrix}\right]
+\end{equation}
+
+\subsubsection{Jacobian of Link Two's Center of Mass}
+\begin{equation}
+J_{2} = 
+\left[\begin{matrix}
+0.5 q_{2} \cos{\left (q_{1} \right )} & 1.0 \sin{\left (q_{1} \right )}\\
+0.5 q_{2} \sin{\left (q_{1} \right )} & - 1.0 \cos{\left (q_{1} \right )}\\
+0 & 6.12323399573677 \cdot 10^{-17}\\
+0 & 0\\
+0 & 0\\
+1 & 0
+\end{matrix}\right]
+\end{equation}
+
+\subsection{Lagrangian Results}
+\begin{equation}
+\begin{align}
+L  &= 0.5 g l_{1} m_{1} \sin{\left (q_{1} \right )} + 0.5 g m_{2} q_{2} \cos{\left (q_{1} \right )}\nonumber\\
+&\qquad + 0.5 m_{2} \dot{q}_{2}^{2} + \dot{q}_{1}^{2} \left(0.125 l_{1}^{2} m_{1}\nonumber\\
+&\qquad + 0.166666666666667 l_{2}^{2} m_{2} + 0.523598775598567 m_{1} r_{1}^{2}\nonumber\\
+&\qquad + 0.125 m_{2} q_{2}^{2} + 1.9631809647333 \cdot 10^{-33} m_{2} r_{2}^{2}\right)
+\end{align}
+\end{equation}
+
+\subsection{Torque: Derived from the Lagrangian}
+\begin{equation}
+\begin{align}
+\tau_{k} &= - 0.5 g l_{1} m_{1} \cos{\left (q_{1} \right )} + 0.5 g m_{2} q_{2} \sin{\left (q_{1} \right )}\nonumber\\
+&\qquad - 0.5 g m_{2} \cos{\left (q_{1} \right )} - 0.25 m_{2} q_{2} \dot{q}_{1}^{2}\nonumber\\
+&\qquad + 0.5 m_{2} q_{2} \dot{q}_{1} \dot{q}_{2} + 1.0 m_{2} \ddot{q}_{2}\nonumber\\
+&\qquad + \ddot{q}_{1} \left(0.25 l_{1}^{2} m_{1} + 0.333333333333333 l_{2}^{2} m_{2} + 1.04719755119713 m_{1} r_{1}^{2}\right)\nonumber\\
+&\qquad + \ddot{q}_{1} \left(0.25 m_{2} q_{2}^{2} + 3.9263619294666 \cdot 10^{-33} m_{2} r_{2}^{2}\right)
+\end{align}
+\end{equation}
+
+\subsection{State Space}
+\subsubsection{Rotational}
+\begin{equation}
+\begin{align}
+L_{\theta} &= \frac{d}{dt}\left(\frac{\partial L}{\partial \theta}\right)\nonumber\\
+&= 1.0 g l_{1} m_{1} \cos{\left (q_{1} \right )} - 1.0 g m_{2} q_{2} \sin{\left (q_{1} \right )}\nonumber\\
+&\qquad + 0.5 m_{2} q_{2} \dot{q}_{1} \dot{q}_{2} + \ddot{q}_{1} \left(0.25 l_{1}^{2} m_{1}\nonumber\\
+&\qquad + 0.333333333333333 l_{2}^{2} m_{2} + 1.04719755119713 m_{1} r_{1}^{2}\nonumber\\
+&\qquad + 0.25 m_{2} q_{2}^{2} + 3.9263619294666 \cdot 10^{-33} m_{2} r_{2}^{2}\right)
+\end{align}
+\end{equation}
+
+\subsubsection{Radial}
+\begin{equation}
+\begin{align}
+L_{l_{2}} &= m_{2} \left(1.0 g \cos{\left (q_{1} \right )} + 0.5 q_{2} \dot{q}_{1}^{2} + 1.0 \ddot{q}_{2}\right)
+\end{align}
+\end{equation}
+
+\subsubsection{Total}
+\begin{equation}
+\begin{align}
+L_{\theta, l_{2}} &= 1.0 g l_{1} m_{1} \cos{\left (q_{1} \right )} - 1.0 g m_{2} q_{2} \sin{\left (q_{1} \right )}\nonumber\\
+&\qquad + 1.0 g m_{2} \cos{\left (q_{1} \right )} + 0.5 m_{2} q_{2} \dot{q}_{1}^{2}\nonumber\\
+&\qquad + 0.5 m_{2} q_{2} \dot{q}_{1} \dot{q}_{2} + 1.0 m_{2} \ddot{q}_{2}\nonumber\\
+&\qquad + \ddot{q}_{1} \left(0.25 l_{1}^{2} m_{1} + 0.333333333333333 l_{2}^{2} m_{2}\right)\nonumber\\
+&\qquad + \ddot{q}_{1} \left(1.04719755119713 m_{1} r_{1}^{2} + 0.25 m_{2} q_{2}^{2}\right)\nonumber\\
+&\qquad + \ddot{q}_{1} \left(3.9263619294666 \cdot 10^{-33} m_{2} r_{2}^{2}\right)
+\end{align}
+\end{equation}
+
+
+\subsubsection{Rotational State Space Representation}
+\begin{equation}
+\begin{bmatrix}
+\dot{x}_{1} \\
+\dot{x}_{2}
+\end{bmatrix}
+&=
+\left[\begin{matrix}
+x_{2}\\
+\frac{4.0 g l_{1} m_{1} \cos{\left (x_{1} \right )} - 8.0 g l_{2} m_{2} \sin{\left (x_{1} \right )} + 4.0 g m_{2} y_{1} \sin{\left (x_{1} \right )} + 4.0 l_{2} m_{2} x_{2} y_{2} - 2.0 m_{2} x_{2} y_{1} y_{2}}{4.0 I_{1} + 4.0 I_{2} + l_{1}^{2} m_{1} + 4.0 l_{2}^{2} m_{2} - 4.0 l_{2} m_{2} y_{1} + m_{2} y_{1}^{2}}
+\end{matrix}\right]
+\end{equation}
+
+\subsubsection{Radial State Space Representation}
+\begin{equation}
+\begin{bmatrix}
+\dot{y}_{1}\\
+\dot{y}_{2}
+\end{bmatrix}
+&=
+\left[\begin{matrix}
+y_{2}\\
+- g \cos{\left (x_{1} \right )} + l_{2} x_{2}^{2} - 0.5 x_{2}^{2} y_{1}
+\end{matrix}\right]
+\end{equation}
+
+\section{Path Generation}
+\begin{center}
+\begin{tabular}{| p{2cm} | p{2cm} | p{2cm} |}
+\hline
+Kinematic Values & Max & Min \\ \hline
+$\dot{\theta}$ $\left(\frac{rad}{s} \right)$ & 0.0 & -2.7668\\ \hline
+$\ddot{\theta}$ $\left(\frac{rad}{s^{2}}\right)$ & 11.1814 & -11.1071\\ \hline
+$T_{\theta} $ $\left(N m\right)$ & 0.1583 & -0.1573\\ \hline
+$\dot{r}$ $\left(\frac{m}{s}\right)$ & 0.0 & -2.4092 \\ \hline
+$\ddot{r}$ $\left(\frac{m}{s^{2}}\right)$ & 15.3600 & -15.0558\\ \hline
+$T_{d}$ $\left(N m\right)$ & 1.1588 & -1.2503\\ \hline
+\end{tabular}
+\end{center}
+
+
+\end{document}
