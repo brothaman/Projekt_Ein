@@ -24,7 +24,7 @@ time = lambda t0,tf,N: np.arange(t0,tf,(tf-t0)/(N+1))
 
 ################################################################################
 ########################### Begin Retraction ###################################
-qi = np.array([ 0,h,h,h,h,0, 0,0,0,0,0,0 ])
+qi = np.array([ h,0,0,0,0,h, 0,0,0,0,0,0 ])
 ti = np.array([ 0,.2,.2,lt-.2,lt-.2,lt,   0,.2,.2,lt-.2,lt-.2,lt ])
 
 q01 = lambda t: np.array([1,t,t**2,t**3,  0,0,0,0, 0,0,0,0])
@@ -53,6 +53,7 @@ Q = np.array([
 	])
 
 a = np.linalg.solve(Q, qi.T)
+print a
 [a10,a11,a12,a13,   a20,a21,a22,a23,    a30,a31,a32,a33] = a
 # functions to calculate position, velocity and acceleration
 qi 		= lambda a,t: a[0] + a[1]*t + a[2]*t**2 + a[3]*t**3
@@ -101,6 +102,7 @@ Q = np.array([
 	])
 
 a = np.linalg.solve(Q, qi.T)
+print a
 # functions to calculate position, velocity and acceleration
 qi 		= lambda a,t: a[0] + a[1]*t + a[2]*t**2 + a[3]*t**3
 qdi		= lambda a,t: a[1] + 2*a[2]*t**2 + 3*a[3]*t**2

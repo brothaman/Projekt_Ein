@@ -3,7 +3,10 @@
 import numpy as np, Kinematic_Characteristics as kc
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.backends.backend_pdf import PdfPages
 from textwrap import wrap
+
+pp = PdfPages('/Users/robertbrothers/Dropbox_Folders/Dropbox/Senior Design/Data&Graphs/one_cycle.pdf')
 
 gravity = 9.81
 # calculate the instantaneous radial characteristics
@@ -176,8 +179,11 @@ def get_requirement():
 	ylab = r'Kinematic Characteristic Values'+'\n'+r'Torque in $(n*m)$, Velocity in $(\frac{rad}{s})$, Position in $(rad)$'
 	plt.ylabel(ylab)
 	ax.set_ylim([-1.8, 1.8])
+	pp.savefig()
 	plt.show()
+	pp.close()
 	return 0
+pp.close()
 
 if __name__ == "__main__":
 	get_requirement()
